@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../Session-2/assests/froxen\ 2\ pic.jpg);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-size: 100%;
+    background-position: contain;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    background-position: center;
+}
+p{
+    font-family: "Playfair Display", serif;
+    color: lightblue;
+    font-size: 23px;
+    position: absolute;
+    margin: 14%;
+    transform: translate(8%, 210%);
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color:lightblue;
+    padding: 15px;
+    margin: 25px;
+    border: 3px solid lightblue;
+    border-radius: 2px;
+    font-family: "Playfair Display", serif;
+    transform: translate(8%, 200%);
+    text-align: center;
+    font-size: 20px;
+}
+#v1,#v2 {
+    margin-top: 340px;
+    text-align: center;
+}
+h1{
+    font-family: "Playfair Display", serif;
+    color: lightblue;
+    margin-top: 10px;
+    max-width: 50px;
+    margin-top: 10px;
+    border-radius: 0px;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+}
+.text-container {
+    position: absolute;
+    margin: 13%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    .text-container {
+        margin: 20%;
+    }
+    .text-box {
+        margin: 10px;
+    }
+}

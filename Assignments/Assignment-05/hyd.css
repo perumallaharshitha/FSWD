@@ -1,0 +1,37 @@
+
+h1 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Open Sans", sans-serif;
+}
+h2 {
+    margin-top: 10px;
+    padding-left: 3px;
+}
+p {
+    line-height: 1.5;
+    font-style: italic;
+    padding: 5px;
+    text-align: justify;
+}
+body {
+    background-color: antiquewhite;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+img {
+    border-radius: 15px;
+    width: 370px;
+    margin-top: 10px;
+}
+
+.image-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

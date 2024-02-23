@@ -1,0 +1,27 @@
+h1 { 
+    color: black;
+    text-align: center;
+    margin: auto;
+    max-width: fit-content;
+    font-weight: bold;
+    text-size-adjust: 5000px;
+    padding-top: 50px;
+}
+
+ul {
+    width: 180px;
+    text-shadow: darkgreen;
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #0c0000;
+    list-style-position: inside;
+    
+}
+body {
+    background-color: rgb(16, 148, 189);
+    text-align: center;
+}
+li {
+    text-align: left;
+}

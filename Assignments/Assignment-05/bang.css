@@ -1,0 +1,43 @@
+body {
+    
+    background-image: url(../Session-2/assests/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Open Sans", sans-serif;
+    color: darkblue;
+}
+h2 {
+    margin-top: 10px;
+    padding-left: 3px;
+    color: darkblue;
+    font-weight: bolder;
+}
+
+p {
+    line-height: 1.5;
+    font-style: italic;
+    padding: 10px 5px 10px;
+    text-align: justify;
+    
+}
+* {
+    margin: 0px;
+}
+img {
+    border-radius: 15px;
+    width: 370px;
+    margin-top: 10px;
+}
+
+.image-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
