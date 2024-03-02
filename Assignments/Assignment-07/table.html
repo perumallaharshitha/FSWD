@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <table> <style>
+       *{
+    margin: 0;
+    padding: 0;
+}
+.t1{
+    margin-top: 30px;
+}
+table {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+table,.title,.sub{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.ft{
+    padding: 9px;
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+.t2 th,.t2 td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+.t2{
+    margin-top: 30px;
+}
+        </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables</title>
+        <link rel="stylesheet" href="07-Assignment.css">
+    </head>
+    <body>
+        <div class="t1">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title" colspan="4">Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sub" colspan="2">subtitle</td>
+                        <td class="sub" colspan="2">subtitle</td>
+                    </tr>
+                    <tr>
+                        <td class="ft">1 item</td>  
+                        <td class="ft">123</td>
+                        <td class="ft">1 item</td>  
+                        <td class="ft">123</td>
+                    </tr>
+                    <tr>
+                        <td class="ft">1 item</td>  
+                        <td class="ft">123</td>
+                        <td class="ft">1 item</td>
+                        <td class="ft">123</td>
+                    </tr>
+                    <tr>
+                        <td class="ft">1 item</td>  
+                        <td class="ft">123</td>
+                        <td class="ft">1 item</td>
+                        <td class="ft">123</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="sub" colspan="2">subtitle</td>
+                        <td class="sub" colspan="2">subtitle</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    
+        <div class="t2">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Subject</th>
+                        <th>John Doe</th>
+                        <th>Miriarm Luther</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Biology</td>
+                        <td>Practical</td>
+                        <td>A</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Theory</td>
+                        <td>A+</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Chemistry</td>
+                        <td>Practical</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>Theory</td>
+                        <td>A</td>
+                        <td>C+</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Physics</td>
+                        <td>Practical</td>
+                        <td>A</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Theory</td>
+                        <td>A-</td>
+                        <td>A-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+</body>
+</html>
