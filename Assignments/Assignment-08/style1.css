@@ -71,3 +71,7 @@ body{
 a {
     text-decoration: none;
 }
+.footer {
+    color: purple;
+    padding-left: 600px;
+}
