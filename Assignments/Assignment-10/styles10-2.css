@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.head {
+    background-color: white;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: white;
+    height: 20px;
+}
+#class {
+    color: darkblue;
+    text-align: left;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 15px;
+}
+.head ul{
+    list-style-type:none;
+    display: flex;
+    align-items: right;
+    text-align: center;
+    justify-content:space-around;
+    padding-left: 850px;
+    padding-top: 2px;
+    margin-top: -20px;
+    width: 400px;
+    color: rgb(8, 243, 243);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+.img {
+    background-color:  rgb(2, 202, 202);
+    height: 50vh;
+}
+.img img {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    padding: 22px;
+    padding-left: 560px;
+    padding-top: 30px;
+}
+.img p {
+    color: rgb(255, 247, 247);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 17px;
+    font-weight:lighter;
+}
+.img h3 {
+    color: rgb(255, 247, 247);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 22px;
+    font-weight:bold;
+    padding-bottom: 10px;
+}
+.content {
+    display: grid;
+    background-color: rgb(135, 67, 67);
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: auto;
+    backdrop-filter: cyan;
+    padding: 20px;
+    padding-top: 40px;
+    gap: 20px;
+}
+#blog1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: yellow;
+}
+#blog2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: violet;
+}
+#blog3 {
+    grid-column: 3/3;
+    grid-row: 1/2;
+    background-color: rgb(219, 198, 198);
+}
+.head p {
+      color:darkblue;
+    text-align: left;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    font-weight:light;
+}
+#blog1, #blog2, #blog3 p {
+    width: auto;
+    text-align: left;
+}

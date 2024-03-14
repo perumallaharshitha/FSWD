@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.body {
+    display: grid;
+    grid-template-columns: 320px 320px 320px 320px;
+    grid-template-rows: 250px 250px 250px 250px;
+    align-content: center;
+    margin: 10px;
+}
+.b1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    justify-content: space-around;
+    background-color: rgba(21, 22, 22, 0.874);
+    color: white;
+}
+.b2 {
+     grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+    background-image: url(../assests/blue\ 11.jpg);
+    color: white;
+}
+.b3 {
+     grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: center;
+    background-image: url(../assests/green\ 10.2.png);
+    color: white;
+}
+.b4 {
+     grid-column: 4/5;
+    grid-row: 1/2;
+    text-align: center;
+    background-color: rgba(21, 22, 22, 0.874);
+    color: white;
+
+}
+.b5 {
+     grid-column: 1/2;
+    grid-row: 2/4;
+    text-align: center;
+    background-color: 	#6082B6;;
+    color: white;
+}
+.b6 {
+     grid-column: 2/4;
+    grid-row: 2/3;
+    text-align: center;
+    background-color: rgba(21, 22, 22, 0.874);
+    color: white;
+
+}
+.b7 {
+     grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+    background-image: url(../assests/blue\ 11.jpg);
+    color: white;
+
+}
+.b8 {
+     grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: center;
+    background-image: url(../assests/green\ 10.2.png);
+    color: white;
+}
+.b9 {
+    grid-column:4/5;
+    grid-row: 2/4;
+    text-align: center;
+    background-color: #6082B6;
+    color: white;
+}
+.body h2, p{
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
+.right {
+    margin-top: 250px;
+    margin-left: 1200px;
+    position: fixed;
+}

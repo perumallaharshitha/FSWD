@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    margin: auto;
+    padding: 18px;
+    justify-content: space-around;
+    text-align:center;
+    background-color: white;
+}
+body {
+    background-color:red
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 50px;
+}
+.body p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
