@@ -1,5 +1,4 @@
 body {
-    
     background-image: url(../assests/background3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,13 +17,11 @@ h2 {
     color: darkblue;
     font-weight: bolder;
 }
-
 p {
     line-height: 1.5;
     font-style: italic;
     padding: 10px 5px 10px;
     text-align: justify;
-    
 }
 * {
     margin: 0px;
@@ -34,7 +31,6 @@ img {
     width: 370px;
     margin-top: 10px;
 }
-
 .image-container {
     text-align: center;
     display: flex;
