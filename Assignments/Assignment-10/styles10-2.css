@@ -32,17 +32,19 @@
     color:rgb(2, 202, 202) ;
 }
 .img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     background-color:  rgb(2, 202, 202);
     height: 50vh;
 }
 .img img {
-    display: flex;
-    flex-wrap: wrap;
     width: 150px;
     height: 150px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 .img p {
     color: rgb(255, 247, 247);
@@ -120,10 +122,6 @@
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: white;
-}
-.img img {
-    width: 120px;
-    height: 120px;
 }
 }
 @media screen and (max-width:567px) {
