@@ -81,6 +81,7 @@
     height: 38px;
     background-color: black;
     color: white;
+    margin-top: 5px;
     border: 2px solid black;
     margin-left: -10px;
 }
