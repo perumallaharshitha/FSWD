@@ -4,10 +4,10 @@
 }
 .body {
     display: grid;
-    grid-template-columns: 320px 320px 320px 320px;
-    grid-template-rows: 250px 250px 250px 250px;
-    align-content: center;
-    justify-content: center;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: white;
 }
 .b1 {
     grid-column: 1/2;
@@ -17,8 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(21, 22, 22, 0.874);
-    color: white;
+    background-color: #323333;
 }
 .b2 {
      grid-column: 2/3;
@@ -28,8 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../assests/blue\ 11.jpg);
-    color: white;
+    background-color:#42a0f8;
 }
 .b3 {
      grid-column: 3/4;
@@ -39,8 +37,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../assests/green\ 10.2.png);
-    color: white;
+    background-color:#5ac69d;
 }
 .b4 {
      grid-column: 4/5;
@@ -50,9 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(21, 22, 22, 0.874);
-    color: white;
-
+    background-color:#323333;
 }
 .b5 {
      grid-column: 1/2;
@@ -63,7 +58,6 @@
     justify-content: center;
     align-items: center;
     background-color: 	#6082B6;;
-    color: white;
 }
 .b6 {
      grid-column: 2/4;
@@ -73,9 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(21, 22, 22, 0.874);
-    color: white;
-
+    background-color:#323333;
 }
 .b7 {
      grid-column: 2/3;
@@ -85,9 +77,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../assests/blue\ 11.jpg);
-    color: white;
-
+    background-color: #42a0f8;
 }
 .b8 {
      grid-column: 3/4;
@@ -97,8 +87,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../assests/green\ 10.2.png);
-    color: white;
+    background-color:  #5ac69d;
 }
 .b9 {
     grid-column:4/5;
@@ -109,7 +98,6 @@
     justify-content: center;
     align-items: center;
     background-color: #6082B6;
-    color: white;
 }
 .body h2{
     display: flex;
@@ -129,19 +117,17 @@
     border-radius: 50%;
     
 }
-.right {
+/* .right {
     margin-top: 250px;
     margin-left: 1200px;
     position: fixed;
     image-orientation:from-image;
-}
+} */
 @media screen and (max-width:992){
     .body {
     display: grid;
-    grid-template-columns: 320px 320px 320px;
-    grid-template-rows: 250px 250px 250px;
-    align-content: center;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .b1 {
     grid-column: 1/2;
@@ -180,7 +166,7 @@
     grid-row: 3/4;
 }
 }
-@media screen and (max-width:567){
+/* @media screen and (max-width:567){
     .body {
     display: grid;
     grid-template-columns: auto;
@@ -255,4 +241,4 @@
     background-color: #6082B6;
     color: white;
 }
-}
+} */
