@@ -64,6 +64,16 @@
 .content #id {
     text-align: center;
 }
+.right {
+    position: fixed;
+    top: 45%;
+    left: 20px;
+}
+.right img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 @media screen  and (max-width: 992px)  {
     .grid-container {
     display: grid;
