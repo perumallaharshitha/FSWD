@@ -62,10 +62,11 @@
     height: 500px;
 }
 .b2 img {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100% 100%;
     height: 550px;
     margin-left: 40px;
 }
@@ -89,6 +90,22 @@
 .b1 p {
     padding: 10px;
     font-size: 18px;
+}
+.a1 img, .a2 img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.a1 {
+    position: fixed;
+    top: 45%;
+    left: 20px;
+}
+.a2 {
+    position: fixed;
+    top: 44%;
+    right: 20px;
+    transform: rotate(180deg);
 }
 @media screen  and (min-width:568px) and (max-width:852px) {
     .head ul  {

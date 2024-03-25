@@ -124,6 +124,18 @@
     background-color: white;
 }
 }
+.left img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.left {
+    position: fixed;
+    top: 45%;
+    left: 20px;
+}
+
+@m
 @media screen and (max-width:567px) {
     .head {
     height: 40px;
