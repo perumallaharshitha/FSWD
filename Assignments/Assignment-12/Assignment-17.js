@@ -20,6 +20,7 @@ else if(b>a && b>c){
 else{
         console.log("Greatest of three numbers is : "+c)
 }
+console.log("\n")
 let n = 56
 function findFactors(n) {
     let fact = " ";
@@ -33,7 +34,7 @@ function findFactors(n) {
 const fact = findFactors(n);
 console.log("Factors of " + n + " are : ");
 console.log(fact)
-
+console.log("\n")
 let p = 23
 console.log("p is : "+p)
 function isPrime(p){
@@ -62,39 +63,17 @@ function printEvenFactors(z) {
 let z = 12;
 console.log("Even factors of " + z + ":");
 printEvenFactors(z);
+console.log("\n")
 
-function sumOfDigits(number) {
-    let numAsString = number.toString();
-    
-    // Initialize sum to 0
-    let sum = 0;
+let m = 1234;
+let sum = 0;
+let rev = 0;
+let temp = m; 
 
-    // Loop through each digit of the number
-    for (let i = 0; i < numAsString.length; i++) {
-        // Convert each digit back to a number and add it to the sum
-        sum += parseInt(numAsString[i]);
-    }
-    
-    // Return the sum
-    return sum;
+while (temp > 0) {
+    rev = temp % 10;
+    sum += rev;
+    temp = Math.floor(temp / 10);
 }
 
-// Function to take user input
-function getUserInput() {
-    let userInput = prompt("Enter a number:");
-    return parseInt(userInput);
-}
-
-// Get user input
-const inputNumber = getUserInput();
-
-// Check if the input is valid
-if (isNaN(inputNumber)) {
-    console.log("Invalid input. Please enter a valid number.");
-} else {
-    // Calculate the sum of digits
-    const sum = sumOfDigits(inputNumber);
-    console.log("Sum of digits of " + inputNumber + " is: " + sum);
-}
-
-    
+console.log(sum);  
