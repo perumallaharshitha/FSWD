@@ -60,6 +60,7 @@ function printEvenFactors(z) {
         }
     }
 }
+console.log("\n")
 let z = 12;
 console.log("Even factors of " + z + ":");
 printEvenFactors(z);
