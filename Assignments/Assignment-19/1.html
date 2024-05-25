@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Assingment-4</title>
+    <title>JS Assignment- 4</title>
 </head>
+<style>
+    body{
+        background-color: rgb(23,23,23);  
+    }
+    h3{
+        text-align: center;
+        color: white;
+        font-size: 3rem;        
+        font-family:'Times New Roman', Times, serif;
+    }
+    img{
+        width: 250px;
+        padding: 40px;
+        border-radius: 50px;
+        display: block;
+        margin: auto;
+    }
+    
+</style>
 <body>
-<h1>Open console to view output</h1>
+<img src="data:image/png;base64,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" alt="">
+<h3>Session - 6</h3>
     <script src="1.js"></script>
 </body>
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment- 9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f7dfe2;
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 800px;
+        height: 470px;
+        margin: auto;
+        padding: 50px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        box-shadow:100px;
+        border-radius: 10px;
+    }
+    .flex-box1{
+        width: 400px;
+        background-color: white;
+        text-align: center;
+       border-top-left-radius: 10px;
+       border-bottom-left-radius: 10px;
+    }
+    .flex-box2{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: rgba(255, 41, 66, 1);
+        color: white;
+        padding: 50px;
+        text-align: center;
+        font-family: "Nunito Sans", sans-serif;
+         border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+    }
+    .head2{
+        padding-top: 70px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-weight: bolder;
+        font-size:2.3rem;
+}
+    .head1 {
+        width: 400px;
+        height: 40px;
+        margin-top:28px;
+        margin-bottom: 20px;
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: bolder;
+        font-size: 35px;
+    }
+    .image{
+        margin: auto;
+        padding: 40px;
+        width: 300px;
+        padding-bottom: 0px;
+    }
+    .flex-box1 p{
+        font-weight: light; 
+        padding-top: 20px;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    .flex-box1 input {
+        margin: 8px;
+        width: 280px;
+        padding: 12px;
+        background-color: #eeeeee;
+        border: 0.5px solid #eeeeee;
+        border-radius: 1px;
+    }
+    .pass{
+        font-size: large;
+        text-decoration: none;
+        font-family: "Nunito Sans", sans-serif;
+        margin-bottom: 20px;
+    }
+    .login{
+        display: flex;
+        width: 100px;
+        margin: auto;
+        border-radius: 40px;
+        background-color: orangered;
+        justify-content: center;
+        font-size: larger;
+        padding: 10px;
+        color: white;
+        font-family: "Nunito Sans", sans-serif;
+    }
+p{
+    font-size: large;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+} 
+</style>
+</head>
+<body>
+    <div class="card">
+        <div class="flex-box1">
+            <div class="head1">Login</div>
+            <div class="image">
+                <a href="">
+                    <img src="../assests/facebook.png" alt="" width="40px">
+                </a>
+                <a href="">
+                    <img src="../assests/twitter.png" alt="" width="40px">
+                </a>
+            </div>
+            <p >or use your account</p>
+            <form action="">
+                <input type="email" placeholder="Email address">
+                <input password="password" placeholder="Password">
+            </form>
+            <div class="pass">
+                <link rel="stylesheet" href="">Forgot your password?
+            </div>
+            <div class="login"><link rel="stylesheet" href="">Login</div>
+        </div>
+        <div class="flex-box2">
+            <h1 class="head2">HTML CSS Login Form</h1>
+            <p>This login form is created using pure HTML and CSS. For social icons, FontAwesome is  used.</p>
+        </div>
+    </div>
+</body>
+</html>
