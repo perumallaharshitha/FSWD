@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment - 8</title>
+    <style>
+        h1 {
+            margin: auto;
+            text-align: center;
+            color: blue;
+        }
+        h2 {
+            padding: 10px;
+        }
+        table, th, td {
+            width: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 20px;
+            margin: 20px;
+        }
+        th{
+            text-align: center;
+            padding: 5px 35px 5px 35px;
+        }
+        td{
+            text-align: left;
+            padding: 0px 0px 0px 5px;
+        }
+        .title{
+            width: 650px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding : 0px 5px 15px 5px;
+        }
+        .grid-item {
+            font-size: 20px;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            background-color: lavenderblush;
+            border-radius: 10px;
+        }
+        .grid-item span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Assignment - 8</h1>
+    <h2>TABLE FORM</h2>
+    <div class="table-body">
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>UserId</th>
+                    <th>Id</th>
+                    <th class="title" >Title</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <h2>GRID FORM</h2>
+    <div class="grid-container" id="grid-container">
+        <!-- Grid items will be inserted here by JavaScript -->
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>
