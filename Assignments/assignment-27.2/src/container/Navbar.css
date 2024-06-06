@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgrey;
+  width: 100%;
+  padding: 10px 20px; 
+  box-sizing: border-box; 
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* Center items vertically */
+}
+
+.nav .photo {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px; /* Adjust margin for better spacing */
+}
+
+.nav ul li {
+  padding: 0 20px; /* Adjust padding for spacing */
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+.nav .pic {
+  width: 30px; /* Adjust size of social icons */
+  height: 30px;
+}

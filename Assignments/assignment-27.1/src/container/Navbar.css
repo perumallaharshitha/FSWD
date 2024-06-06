@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  background-color: lightgrey;
+  width: 100%; /* Make it flexible */
+  padding: 0 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.nav ul {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  list-style: none;
+  align-items: center; /* Center items vertically */
+  margin: 0;
+}
+
+.nav .photo {
+  width: 50px; /* Make logo smaller */
+  height: 50px;
+  padding: 0 10px; /* Adjust padding */
+}
+
+.nav ul li {
+  padding: 0 20px; /* Adjust padding */
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+.nav .pic {
+  width: 30px; /* Adjust size of social icons */
+  height: 30px;
+}
