@@ -1,39 +1,25 @@
-.nav {
-  display: flex;
-  height: 50px;
-  justify-content: space-between;
-  background-color: lightgrey;
-  width: 100%; /* Make it flexible */
-  padding: 0 20px; /* Add some padding */
-  box-sizing: border-box; /* Include padding in the width */
+.nav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
 }
-
-.nav ul {
-  padding-left: 0;
-  padding-right: 0;
-  display: flex;
-  list-style: none;
-  align-items: center; /* Center items vertically */
-  margin: 0;
+.nav ul{
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    list-style: none;
 }
-
-.nav .photo {
-  width: 50px; /* Make logo smaller */
-  height: 50px;
-  padding: 0 10px; /* Adjust padding */
+.nav .photo{
+    width: 200px;
+    height: 200px;
+    padding: 10px 20px;
 }
-
-.nav ul li {
-  padding: 0 20px; /* Adjust padding */
+.nav ul li{
+    padding: 20px;
 }
-
-.nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.2rem; /* Adjust font size */
-}
-
-.nav .pic {
-  width: 30px; /* Adjust size of social icons */
-  height: 30px;
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
