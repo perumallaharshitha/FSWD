@@ -1,0 +1,32 @@
+.container .card {
+    width: 266px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cards{
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: white;
+    gap: 20px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.card .name{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card .pic{
+    width: 150px;
+    margin: 10px 58px;
+    margin-top: 5px;
+}
+
+.card .btn{
+    margin: auto;
+    width: 100px;
+    color: white;
+}

@@ -1,0 +1,35 @@
+.container {
+  /* width: auto; */
+  /* height: fit-content; */
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 20px 100px; 
+  padding: 10px; 
+}
+.text-center {
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; 
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.input-field {
+  background-color: whitesmoke;
+  margin-top: -10px; 
+}
+
+label {
+  margin-bottom: 0; 
+}
+
+.form-radio {
+    justify-content: space-evenly;
+}
