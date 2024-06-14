@@ -14,14 +14,16 @@ function Parent() {
     }
 
   return (
-    <div className="container">
+    <div className=" d-flex mt-10 align-content-center">
+        <div className="con">
         <div className="parent text-center text-primary">
             <h3>Parent</h3>
         </div>
-        <div className="card text-center">
+        <div className="cd text-center align-items-center">
             <h5>Count = {counter}</h5>
         </div>
         <Child count={{counter, changeIncre, changeDecre}} />
+    </div>
     </div>
   )
 }
