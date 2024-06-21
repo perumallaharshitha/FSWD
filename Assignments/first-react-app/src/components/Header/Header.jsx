@@ -1,68 +1,56 @@
+import "./Header.css";
 import { Link } from "react-router-dom";
-import kitab from '../../assets/kitabay.png'
-import { userLoginContext } from '../../contexts/userLoginContext';
-import { useContext } from 'react';
-import './Header.css'
-import { useNavigate } from "react-router-dom";
+import { HiOutlineHome } from "react-icons/hi";
+import { SiGnuprivacyguard } from "react-icons/si";
+import { FaSignInAlt } from "react-icons/fa";
+import { IoMdInformationCircle } from "react-icons/io";
+import { FcStumbleupon } from "react-icons/fc";
+import { userLoginContext } from "../../contexts/userLoginContext";
+import { useContext } from "react";
+import image from '../../assets/kitabay.png'
+
 function Header() {
-  let navigate = useNavigate();
-  const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser } = useContext(userLoginContext);
+  let { logoutUser, userLoginStatus } = useContext(userLoginContext);
 
-  function logoutUser() {
-    //reset state
-    setCurrentUser({});
-    setUserLoginStatus(false)
-    //redirect to login page
-    navigate('')
-  }
   return (
-    <div>
-      <nav className="nav justify-content-center justify-content-sm-between d-flex flex-wrap p-1 align-items-center header">
-        <ul className="nav text-center justify-content-center header">
-          <li className='nav-item'>
-            <Link to="" className='nav-link logo'><img src={kitab} width={80} alt="" /></Link>
+    <div className="d-flex flex-wrap justify-content-around header">
+      <img className="" width={100} src={image} alt="" />
+      <ul className="nav fs-5 p-3">
+        <li className="nav-item">
+          <Link to="" className="nav-link text-white">
+            <HiOutlineHome className="fs-3 text-warning " /> Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="register" className="nav-link text-white">
+            <SiGnuprivacyguard className="fs-3 text-warning " />
+            Register
+          </Link>
+        </li>
+        {userLoginStatus === false ? (
+          <li className="nav-item">
+            <Link to="login" className="nav-link text-white">
+              <FaSignInAlt className="fs-3 text-warning me-2 " />
+              Login
+            </Link>
           </li>
-        </ul>
-        <ul className='nav justify-content-end'>
-          {/* If user is LoggedIn then it will not display otherwise it will display Register */}
-          {!userLoginStatus && <li className='nav-item'>
-            <Link to="register" className='nav-link text-white'>Register</Link>
-          </li>}
-          {/* If user is Loged In Then Display Logout*/}
-          {userLoginStatus && <li className='nav-item'>
-            <button onClick={logoutUser} className='nav-link text-white'>Logout</button>
-          </li>}
-          {/* If user is LoggedIn then it will not display otherwise it will display Login */}
-          {
-            !userLoginStatus && <li className='nav-item'>
-              <Link to="login" className='nav-link text-white'>Login</Link>
-            </li>
-          }
-          {
-            !userLoginStatus && <li className='nav-item'>
-              <Link to="about" className='nav-link text-white'>About</Link>
-            </li>
-          }
-          {/* If user is Loged In Then Display Cart*/}
-          {userLoginStatus && (
-            <li className='nav-item'>
-              <Link to="cart" className='nav-link text-white'>Cart</Link>
-            </li>
-          )}
-          {/* If user is Loged In Then Display Profile*/}
-          {userLoginStatus && (
-            <li className='userProfile nav-item'>
-              <Link to="user-profile" className='rounded-circle'>
-                <img src={currentUser.profile} width={50} height={50} alt="profile" className='ms-3 me-3 profile-img' />
-              </Link>
-              {/* <Link to="user-profile" className='nav-link text-white'>Profile</Link> */}
-            </li>
-          )}
-
-        </ul>
-      </nav >
+        ) : (
+          <li className="nav-item">
+            <Link to="login" className="nav-link text-white" onClick={logoutUser}>
+              <FaSignInAlt className="fs-3 text-warning me-2 " />
+              Logout
+            </Link>
+          </li>
+        )}
+        <li className="nav-item">
+          <Link to="about" className="nav-link text-white">
+            <IoMdInformationCircle className="fs-3 text-warning me-2 " />{" "}
+            Aboutus
+          </Link>
+        </li>
+      </ul>
     </div>
-  )
+  );
 }
 
 export default Header;

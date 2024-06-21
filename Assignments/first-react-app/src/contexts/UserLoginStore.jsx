@@ -1,48 +1,41 @@
-import React, { useState } from 'react';
-import { userLoginContext } from './userLoginContext';
+import { userLoginContext } from "./userLoginContext";
+import { useState } from "react";
 
 function UserLoginStore({ children }) {
-    const [currentUser, setCurrentUser] = useState(null);
-    const [userLoginStatus, setUserLoginStatus] = useState(false);
-    
-    async function handleLogin(userObj) {
-        let response = await fetch(`https://user-api-6z6q.onrender.com/users?username=${userObj.username}&password=${userObj.password}`);
-        let usersData = await response.json();
-        console.log('usersData: ', usersData);
+  //login user state
+  let [currentUser, setCurrentUser] = useState(null);
+  let [userLoginStatus,setUserLoginStatus]=useState(false)
 
-        // If the Username is not found in the show alert
-        if(usersData.length === 0){
-            alert('Invalid Credentials');
-            // Invalid Credntials
-            setCurrentUser(null);
-            setUserLoginStatus(false)
-        }
-        // If the username is there and the password is wrong
-        else if(usersData[0].password !== userObj.password){
-            // Invalid Credntials
-            setCurrentUser(null);
-            setUserLoginStatus(false)
-            alert('Wrong Password');
-        }
-        // If the username and password are correct
-        else{
-            setCurrentUser(usersData[0]);
-            setUserLoginStatus(true);
-        } 
-    }
-
-    // User Logout
-    function logoutUser(){
-        //reset state
-        setCurrentUser({});
-        setUserLoginStatus(false)
-    }
-
-    return (
-        <userLoginContext.Provider value={{ handleLogin,logoutUser,userLoginStatus,setCurrentUser,setUserLoginStatus,currentUser }}>
-            {children}
-        </userLoginContext.Provider>
+  //user login
+  async function loginUser(userCred) {
+    let res = await fetch(
+      `http://localhost:3000/users?username=${userCred.username}&password=${userCred.password}`
     );
+    let usersList = await res.json();
+    console.log("users list",usersList)
+    if (usersList.length === 0) {
+      //invalid credentials
+      console.log("invalid user")
+      setCurrentUser(null)
+      setUserLoginStatus(false)
+    } else {
+      setCurrentUser(usersList[0]);
+      setUserLoginStatus(true)
+    }
+  }
+
+  //user logout
+  function logoutUser(){
+    //reset state
+    setCurrentUser({});
+    setUserLoginStatus(false);
+  }
+
+  return (
+    <userLoginContext.Provider value={{ loginUser,logoutUser,userLoginStatus }}>
+      {children}
+    </userLoginContext.Provider>
+  );
 }
 
 export default UserLoginStore;

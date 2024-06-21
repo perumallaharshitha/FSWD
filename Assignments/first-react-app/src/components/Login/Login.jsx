@@ -1,46 +1,89 @@
-import React, { useContext, useEffect } from 'react';
-import './Login.css';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { userLoginContext } from '../../contexts/userLoginContext';
-
+import "./Login.css";
+import { useForm } from "react-hook-form";
+import {useContext} from 'react';
+import { userLoginContext } from "../../contexts/userLoginContext";
+import {useNavigate} from 'react-router-dom'
+import { useEffect } from "react";
 
 function Login() {
-  const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const { handleLogin, userLoginStatus } = useContext(userLoginContext);
 
-  function onLogin(userDetails){
-    handleLogin(userDetails)
-    console.log('user Details: ', userDetails);
+  let { loginUser,userLoginStatus}=useContext(userLoginContext)
+  //const [userLoginErr, setUserLoginErr] = useState('')
+  const navigate=useNavigate()
+
+  let {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+
+  //on user submit
+   function onUserLogin(userCred) {
+   
+    loginUser(userCred)
+    console.log(userLoginStatus)
+   
   }
 
   useEffect(()=>{
-    if(userLoginStatus==true){
+    if(userLoginStatus===true){
       navigate('/user-profile')
     }
   },[userLoginStatus])
 
-
+  
   return (
     <div>
-      <h1 className='text-center m-4'>Login</h1>
-      <div className='row'>
-        <div className='col-11 col-md-6 mx-auto'>
-          <form className='mx-auto' onSubmit={handleSubmit(onLogin)}>
-            <div className='mb-3'>
-              <label htmlFor="username" className='form-label'>Username</label>
-              <input type="text" className='form-control' {...register('username', { required: true })} id='username' placeholder='Enter username' />
-              {errors.username && <p className='text-danger'>Username is required</p>}
+      <p className="display-3 text-center">User Login</p>
+      {/* registration form */}
+      <div className="row ">
+        <div className="col-11 col-sm-10 col-md-6 mx-auto">
+          {/* other error message */}
+          {/* {setUserLoginStatus===false &&userLoginErr.length!==0&& (
+            <p className="fs-2 text-danger text-center">{err}</p>
+          )} */}
+          <form
+            className="mx-auto mt-5 bg-light p-3"
+            onSubmit={handleSubmit(onUserLogin)}
+          >
+            {/* username */}
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                className="form-control"
+                {...register("username", { required: true })}
+              />
+              {/* validation error message on username */}
+              {errors.username?.type === "required" && (
+                <p className="text-danger lead">*Username is required</p>
+              )}
             </div>
-            <div className='mb-3'>
-              <label htmlFor="password" className='form-label'>Password</label>
-              <input type="password" className='form-control' {...register('password', { required: true })} id='password' placeholder='Enter password' />
-              {errors.password && <p className='text-danger'>Password is required</p>}
+            {/* password */}
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="form-control"
+                {...register("password", { required: true })}
+              />
+              {/* validation error message on password */}
+              {errors.password?.type === "required" && (
+                <p className="text-danger lead">*Password is required</p>
+              )}
             </div>
-            <div className='mb-3'>
-              <button type='submit' className='btn btn-primary'>Login</button>
-            </div>
+
+            {/* submit button */}
+            <button className="btn btn-success" type="submit">
+              Login
+            </button>
           </form>
         </div>
       </div>

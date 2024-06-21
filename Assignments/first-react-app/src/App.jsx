@@ -1,57 +1,49 @@
-import React, { Children } from 'react'
-import RootLayout from './RootLayout'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './components/Home/Home'
-import Register from './components/Regsiter/Register'
-import Login from './components/Login/Login'
-import About from './components/About/About'
-import RoutingError from './RoutingError'
-import UserProfile from './components/user-profile/UserProfile'
-import Cart from './components/cart/Cart'
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./RootLayout";
+import Home from "./components/Home/Home";
+import Register from "./components/Regsiter/Register";
+import Login from "./components/Login/Login";
+import Aboutus from "./components/About/About";
+import UserProfile from './components/user-profile/UserProfile';
+import RoutingError from "./RoutingError";
 
 function App() {
-
-  // Browser Router
-
   const browserRouter = createBrowserRouter([
     {
       path: "",
       element: <RootLayout />,
-      errorElement: <RoutingError/>,
+      errorElement:<RoutingError />,
       children: [
         {
           path: "",
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "register",
-          element: <Register />
+          element: <Register />,
         },
         {
           path: "login",
-          element: <Login />
-        }, 
+          element: <Login />,
+        },
         {
           path: "about",
-          element:<About/>
+          element: <Aboutus />,
         },
         {
-          path:"user-profile",
-          element:<UserProfile/>
-        },
-        {
-          path:"cart",
-          element:<Cart/>
+          path:'user-profile',
+          element:<UserProfile />
         }
-      ]
-    }
-  ])
+      ],
+    },
+  ]);
 
   return (
-    <RouterProvider router={browserRouter}>
-      {Children}
-    </RouterProvider>
-  )
+    <div className="main">
+      <RouterProvider router={browserRouter} />
+    </div>
+  );
 }
 
-export default App
+export default App;
