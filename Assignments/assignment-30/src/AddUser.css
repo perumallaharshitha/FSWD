@@ -1,4 +1,4 @@
-.container .card {
+.container .car {
     width: 266px;
     height: 350px;
     display: flex;
@@ -16,16 +16,16 @@
     margin: 10px 0px;
     padding: 10px;
 }
-.card .name{
+.car .name{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.card .pic{
+.car .pic{
     width: 150px;
     margin: 10px 58px;
     margin-top: 5px;
 }
 
-.card .btn{
+.car .btn{
     margin: auto;
     width: 100px;
     color: white;

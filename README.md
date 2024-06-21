@@ -46,7 +46,7 @@
     [Assignment-25.3](https://perumallaharshitha.github.io/FSWD/Assignments/Assignment-25/3.html)
 26. [Assignment-26](https://react-assignment-26.netlify.app/#)
 27. [Assignment-27.1](https://react-assignment-27-1.netlify.app/#)
-27. [Assignment-27.2](https://react-assignment-27-2.netlify.app/#)
+    [Assignment-27.2](https://react-assignment-27-2.netlify.app/#)
 28. [Assignment-28](https://react28-assignment.netlify.app/)
 29. [Assignment-29](https://react-29-assignment.netlify.app/)
 30. [Assignment-30](https://react-30-assignment.netlify.app/)
