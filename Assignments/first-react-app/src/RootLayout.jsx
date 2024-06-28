@@ -1,18 +1,18 @@
 import React from 'react'
+import Header from './elements/Header/Header'
+import Footer from './elements/Footer/Footer'
 import { Outlet } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
 
-function Layout() {
-    return (
-        <div>
-            <Header />
-            <div style={{minHeight:"100vh"}} className='container'>
-                <Outlet />
-            </div>
-            <Footer />
-        </div>
-    )
+function RootLayout() {
+  return (
+    <div>
+    <Header/>
+    <div style={{minHeight:"100vh"}} className='container w-100' >
+    <Outlet/>
+    </div>
+    <Footer/>
+    </div>
+  )
 }
 
-export default Layout
+export default RootLayout

@@ -1,49 +1,75 @@
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./RootLayout";
-import Home from "./components/Home/Home";
-import Register from "./components/Regsiter/Register";
-import Login from "./components/Login/Login";
-import Aboutus from "./components/About/About";
-import UserProfile from './components/user-profile/UserProfile';
+import React from 'react'
+import RootLayout from './RootLayout'
+import Header from './elements/Header/Header'
+import Footer from './elements/Footer/Footer'
+import Home from './elements/Home/Home'
+import Register from './elements/Regsiter/Register'
+import Login from './elements/Login/Login'
+import About from './elements/About/About'
+import UserProfile from './elements/user-profile/UserProfile';
+import Products from "./elements/products/Products";
+import Cart from './elements/cart/Cart'
 import RoutingError from "./RoutingError";
+import {Navigate} from 'react-router-dom';
+import EditUser from "./elements/edit-user/Edituser";
+
+
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 function App() {
-  const browserRouter = createBrowserRouter([
-    {
-      path: "",
-      element: <RootLayout />,
-      errorElement:<RoutingError />,
-      children: [
+    const BrowserRouter=createBrowserRouter([
         {
-          path: "",
-          element: <Home />,
-        },
-        {
-          path: "register",
-          element: <Register />,
-        },
-        {
-          path: "login",
-          element: <Login />,
-        },
-        {
-          path: "about",
-          element: <Aboutus />,
-        },
-        {
-          path:'user-profile',
-          element:<UserProfile />
+            path: "",
+            element:<RootLayout/>,
+            errorElement:<RoutingError/>,
+            children:[
+                {
+                    path: "",
+                    element:<Home/>
+                },
+                {
+                    path: "register",
+                    element:<Register/>
+                },
+                {
+                    path: "login",
+                    element: <Login/>
+                },
+                {
+                    path: "about",
+                    element:<About/>
+                },
+                {
+                    path:"edit-user",
+                    element:<EditUser />
+                },
+                {
+                    path: "user-profile",
+                    element: <UserProfile/>,
+                    children:[
+                        {
+                            path: 'products',
+                            element: <Products/>
+                        },
+                        {
+                            path: 'cart',
+                            element: <Cart/>
+                        },
+                        {
+                            path: '',
+                            element: <Navigate to={'products'}/>
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-    },
-  ]);
-
+    ])
   return (
-    <div className="main">
-      <RouterProvider router={browserRouter} />
+    <div>
+        <RouterProvider router={BrowserRouter}/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
