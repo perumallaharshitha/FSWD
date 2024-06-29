@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Product from '../product/Product';
+import Product from '../Product/Product.jsx';
 import { userLoginContext } from '../contexts/userLoginContext';
-import Products from '../products/Products';
+import Products from '../Products/Products.jsx'
 
 function Home() {
   const { userLoginStatus, currentUser } = useContext(userLoginContext);
@@ -30,7 +30,7 @@ function Home() {
         </div>
       ) : (
         <div className="text-center">
-          <h3 className="m-4 mb-3">Welcome Guest</h3>
+          <h3 className="m-4 mb-3">Welcome here</h3>
           
         </div>
       )}

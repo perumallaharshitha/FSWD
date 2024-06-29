@@ -7,7 +7,7 @@ import Register from './elements/Regsiter/Register'
 import Login from './elements/Login/Login'
 import About from './elements/About/About'
 import UserProfile from './elements/user-profile/UserProfile';
-import Products from "./elements/products/Products";
+import Products from "./elements/Products/Products";
 import Cart from './elements/cart/Cart'
 import RoutingError from "./RoutingError";
 import {Navigate} from 'react-router-dom';
