@@ -1,10 +1,11 @@
 // Product.jsx
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Product.css';
 import { userLoginContext } from '../contexts/userLoginContext';
 
 function Product({ product }) {
   const { currentUser, userLoginStatus } = useContext(userLoginContext);
+  const [completedStatus, setCompletedStatus] = useState(product.completed);
 
   async function addToCart(product) {
     product.username = currentUser.username;
@@ -34,8 +35,9 @@ function Product({ product }) {
     <div className='col-lg-3 col-md-4 col-sm-6 mb-4'>
       <div className="card h-100">
         <div className="card-body text-center">
-          <h5 className="card-title text-center">{product.title}</h5>
-          <p className="card-text mt-2 mb-2"><strong>Status:</strong> {product.completed}</p>
+          <h5 className="card-title">{product.title}</h5>
+          {/* Displaying completed status */}
+          <p className="card-text m-2"><strong>Status:</strong> {String(completedStatus)}</p>
           <p className="card-text"><strong>Priority:</strong> {product.priority}</p>
         </div>
         <div className="card-footer d-flex justify-content-center">
