@@ -1,0 +1,15 @@
+.header{
+    background-color: var(--medium-dark);
+    align-items: center;
+}
+
+.header h1{
+    color:var(--dark-pink)
+} 
+
+.image{
+    height: 70px;
+    width: 120px;
+    padding: 10px 0px 3px 0px;
+    background-color: #ced4da;
+}

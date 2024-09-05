@@ -40,9 +40,10 @@ function Product({ product }) {
           <p className="card-text m-2"><strong>Status:</strong> {String(completedStatus)}</p>
           <p className="card-text"><strong>Priority:</strong> {product.priority}</p>
         </div>
-        <div className="card-footer d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
+          {/* <button type='submit' className='btn btn-success'>Add to Cart</button> */}
           {userLoginStatus && (
-            <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
+            <button type="submit" className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
           )}
         </div>
       </div>

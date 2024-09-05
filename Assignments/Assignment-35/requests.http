@@ -4,7 +4,7 @@ get http://localhost:3500/products
 get http://localhost:3500/products/1
 
 ### 
-post http://localhost:3500/product
+post https://products-api-l8et.onrender.com/product
 Content-Type: application/json
 
 {

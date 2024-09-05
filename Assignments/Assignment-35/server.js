@@ -1,7 +1,7 @@
 const exp = require("express");
 const app = exp();
 
-app.use(exp.json()); // Correctly use exp.json()
+app.use(exp.json()); 
 
 let listOfProducts = [
     {

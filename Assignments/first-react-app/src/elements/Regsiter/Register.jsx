@@ -14,7 +14,7 @@ function Register() {
 
       console.log('userObj: ', userObj);
       
-      let res = await fetch('http://localhost:3000/users', {
+      let res = await fetch('http://localhost:4000/user-api/user', {
       
         method: 'POST',
         headers: {
